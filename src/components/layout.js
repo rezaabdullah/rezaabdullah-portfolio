@@ -1,11 +1,14 @@
 import * as React from "react"
 import Header from "./Header"
-import { GolbalStyle } from "./styles/GlobalStyles"
+import { GlobalStyle } from "./styles/GlobalStyles"
+// import { Normalize } from 'styled-normalize'
+// import { Reset } from "styled-reset"
 
 const Layout = ({ children }) => {
   return (
     <>
-      <GolbalStyle />
+      {/* <Normalize /> */}
+      <GlobalStyle />
       <Header />
       <main>{children}</main>
     </>

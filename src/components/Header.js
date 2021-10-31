@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import {FaBars} from "react-icons/fa"
+import { FaBars } from "react-icons/fa"
 import { menuData } from "../data/MenuData"
 
 const Header = () => {
@@ -44,6 +44,10 @@ const NavLogo = styled(Link)`
   padding: 0;
   cursor: pointer;
   text-transform: uppercase;
+  font-size: 48px;
+  @media screen and (max-width: 768px) {
+    padding: 4px;
+  }
 `
 const NavLink = styled(Link)`
   background: #707070;
@@ -63,8 +67,8 @@ const Hamburger = styled(FaBars)`
     position: absolute;
     top: 0;
     right: 0;
-    transform: translate(-60%, 50%);
-    font-size: 48px;
+    transform: translate(-20%, 45%);
+    font-size: 32px;
     cursor: pointer;
   }
 `
