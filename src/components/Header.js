@@ -33,11 +33,14 @@ const Nav = styled.div`
   z-index: 200;
   position: relative;
   border-bottom: #707070 1px solid;
+
+  @media screen and (max-width: 1180px) {
+    padding: 0 4px;
+  }
 `
 
 const NavLogo = styled(Link)`
-  background: #707070;
-  color: white;
+  color: #1d3557;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -50,8 +53,7 @@ const NavLogo = styled(Link)`
   }
 `
 const NavLink = styled(Link)`
-  background: #707070;
-  color: white;
+  color: #1d3557;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -70,13 +72,12 @@ const Hamburger = styled(FaBars)`
     transform: translate(-20%, 45%);
     font-size: 32px;
     cursor: pointer;
+    color: #1d3557;
   }
 `
 const NavMenu = styled.div`
-  background: #E0E0E0;
   display: flex;
   align-items: center;
-  // margin-right: -48px;
 
   @media screen and (max-width: 768px) {
     display: none;
