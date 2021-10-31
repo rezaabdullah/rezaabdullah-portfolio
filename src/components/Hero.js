@@ -34,7 +34,7 @@ const Hero = () => {
         </HeroCTA>
       </HeroContent>
       <HeroImage>
-        <StaticImage src="../images/abdullah_reza_profile.jpg" alt="Profile picture of Abdullah Reza"  layout="constrained"/>
+        <StaticImage src="../images/abdullah_reza_profile_square.jpg" alt="Profile picture of Abdullah Reza"  layout="constrained"/>
       </HeroImage>
     </HeroContainer>
   )
@@ -43,55 +43,57 @@ const Hero = () => {
 export default Hero
 
 const HeroContainer = styled.div`
-  background: transparent;
-  display: flex;
-  margin: -64px 0 0 0;
-  padding: 16px calc((100vw - 1180px) / 2);
+  padding: 0 calc((100vw - 1180px) / 2);
   position: relative;
-  height: 100vh;
+  height: 616px;
+  display: flex;
+  justify-content: space-between;
   overflow: hidden;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 624px) {
     display: flex;
     flex-direction: column;
+    overflow: visible;
   }
 `
 
 const HeroContent = styled.div`
-  width: calc((100vw - 1180px) / 2);
-  margin: 128px 0 64px 0;
   flex-grow: 1;
-  padding: 0 4px;
+  width: calc((100vw - 1180px) / 2);
+  margin: 32px 4px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  @media screen and (max-width: 600px) {
-    margin: 96px 0 32px 0;
+  // @media screen and (max-width: 1024px) {
+  //   margin: 64px 0 0 0;
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: flex-start;
+  // }
+
+  @media screen and (max-width: 624px) {
+    margin: 16px 4px;
     width: 100%;
-    height: 50vh;
+    justify-content: flex-start;
   }
 `
 const HeroImage = styled.div`
   flex-grow: 1;
-  height: calc(100vh - 192px);
+  display: flex;
+  justify-content: flex-end;
   width: calc((100vw - 1180px) / 2);
-  margin: 128px 0 64px 0;
-  overflow: hidden;
-  padding: 0 4px;
+  margin: 32px 4px;
 
-  @media screen and (max-width: 600px) {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    margin: 0;
-  }
+  // @media screen and (max-width: 1024px) {
+  //   margin: 64px 0 0 0;
+  // }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 624px) {
     display: flex;
-    align-items: flex-start;
+    justify-content: center;
     width: 100%;
-    margin: 0;
+    margin: 16px 4px;
   }
 `
 
@@ -101,10 +103,6 @@ const HeroH1 = styled.h1`
   line-height: clamp(36px, 4vw, 64px);
   font-weight: 300;
   vertical-align: text-top;
-
-  @media screen and (max-width: 600px) {
-    width: 100%;
-  }
 `
 
 const HeroH2 = styled.h2`
@@ -114,10 +112,6 @@ const HeroH2 = styled.h2`
   font-family: "IBM Plex Mono";
   font-weight: 300;
   margin-top: 24px;
-
-  @media screen and (max-width: 600px) {
-    width: 100%;
-  }
 `
 
 const HeroP = styled.p`
@@ -128,8 +122,20 @@ const HeroP = styled.p`
   font-weight: 400;
   width: 90%;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 624px) {
     width: 100%;
+  }
+`
+
+const HeroCTA =styled.div`
+  width: 90%;
+  margin-top: 32px;
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (max-width: 624px) {
+    width: 100%;
+    margin: 16px 8px 0 0;
   }
 `
 
@@ -145,14 +151,4 @@ const IconLink = styled(Link)`
   color: #1d3557;
   margin:0 32px 0 0;
   cursor: pointer;
-`
-
-const HeroCTA =styled.div`
-  margin-top: 32px;
-  display: flex;
-  align-items: center;
-  
-  @media screen and (max-width: 600px) {
-    justify-content: space-between;
-  }
 `
