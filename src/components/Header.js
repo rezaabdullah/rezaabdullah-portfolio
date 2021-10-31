@@ -25,7 +25,7 @@ const Header = () => {
 export default Header
 
 const Nav = styled.div`
-  background: #E0E0E0;
+  background: transparent;
   height: 64px;
   display: flex;
   justify-content: space-between;
